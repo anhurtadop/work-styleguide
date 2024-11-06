@@ -12,24 +12,30 @@ Utilizamos el estándar [GitFlow](https://www.gitkraken.com/learn/git/git-flow),
 
 - **feature/[nombre-modulo / id-tarea-jira]**
 - **bugfix/[nombre-descripción / id-tarea-jira]**
-- **hotfix/[nombre-descripción / id-tarea-jira]** → sale de `main/master`.
-- **release/sp1-nombre-modulo** → se etiqueta desde `main/master`.
+- **hotfix/[nombre-descripción / id-tarea-jira]** → sale de `main/master`
+- **release/sp1-nombre-modulo** → se etiqueta desde `main/master`
 
 ## Reglas de trabajo
 
-- No se permiten `push` directos a las ramas mencionadas anteriormente.
-- Los **Pull Requests (PR)** deben ser aprobados por el arquitecto.
+- No se permiten `commits` o `push` directos a las ramas mencionadas anteriormente
+- Los **Pull Requests (PR)** deben ser aprobados por el arquitecto
 
-### Reglas para los Pull Requests
+### Reglas para los Pull Requests (PR)
 
-- El nombre debe contener el nombre de la rama creada para los cambios.
-- La descripción del PR debe contener información general de los cambios realizados o los commits.
+- El título del PR debe:
+  - Estar escrito en inglés y en minúsculas
+  - Debe tener un descripción corta y clara de los cambios o usar el ID de la tarea en Jira
+  - Seguir la estructura definida en [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), según el contenido del envío, ejemplos:
+    - `feat: JIRA-123`
+    - `fix: login process adjustment`
+- La descripción del PR debe contener información general de los cambios realizados o los commits generados
+- Se le debe asignar el PR al arquitecto para su revisión
 
 ### Reglas para los commits
 
 - Los commits deben estar escritos en inglés y en minúsculas.
   - Ejemplo: `feat: added thor.json file`
-- Deben seguir la estructura definida en [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), según el contenido del envío:
+- Deben seguir la estructura definida en [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), según el contenido del envío, ejemplos:
   - `feat: added thor.json file`
   - `fix: updated thor.json file on line 20`
   - `docs: updated readme.md file with documentation about install program`
